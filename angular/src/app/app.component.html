@@ -1,0 +1,14 @@
+<h1>Publish</h1>
+<div class="vert-container">
+  <input placeholder="topic" [(ngModel)]="topic" name="publish">
+  <textarea #message cols="30" rows="10" placeholder="message"></textarea>
+  <button (click)="publish()">Publish</button>
+</div>
+
+<br />
+<h1>Subscribe</h1>
+<div class="vert-container">
+  <input placeholder="topic" [(ngModel)]="topic" name="subscribe">
+  <button (click)="subscribe()">Subscribe</button>
+  <textarea cols="30" rows="10" placeholder="message" readonly>{{lastMessage}}</textarea>
+</div>

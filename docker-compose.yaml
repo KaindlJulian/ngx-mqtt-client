@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  mosquitto:
+    container_name: mosquitto
+    image: eclipse-mosquitto
+    restart: unless-stopped
+    ports: 
+      - "8000:8000"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+    networks: 
+      - mqnet
+  angular:
+    container_name: angular
+    build: ./angular
+    ports:
+      - "80:80"
+    networks: 
+      - mqnet
+
+networks: 
+  mqnet:
+    driver: bridge

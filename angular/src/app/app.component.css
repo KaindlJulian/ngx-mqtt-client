@@ -1,0 +1,9 @@
+.vert-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.vert-container * {
+    margin-bottom: 4px;
+}
